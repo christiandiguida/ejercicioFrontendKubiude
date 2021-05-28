@@ -1,0 +1,42 @@
+<div
+  class="d-flex flex-column justify-content-center align-items-center"
+  id="loginMainContainer"
+>
+  <div id="loginBox" class="p-5 border rounded">
+    <h1 class="mb-4">Welcome to the 70s Rock Bands WebSite</h1>
+    <hr />
+    <form [formGroup]="form" class="mt-4">
+      <div class="mb-3">
+        <label for="username" class="form-label">Name</label>
+        <input
+          formControlName="username"
+          class="form-control"
+          id="username"
+          type="text"
+          placeholder="Username"
+          aria-label="Username"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          formControlName="password"
+          class="form-control"
+          id="password"
+          type="password"
+          placeholder="Password"
+          aria-label="Password"
+        />
+      </div>
+      <button (click)="validation()" type="button" class="btn btn-primary">
+        Log In
+      </button>
+    </form>
+    <div class="mt-3">
+      <a [routerLink]="['/newUser']" class="link-primary"
+        >You don't have an account? Create one here!</a
+      >
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

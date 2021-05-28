@@ -1,0 +1,44 @@
+<div
+  class="d-flex flex-column justify-content-center align-items-center"
+  id="newUserMainContainer"
+>
+  <div id="newUserBox" class="p-5 border rounded">
+    <h1 class="mb-4">Create a New User</h1>
+    <hr />
+    <form [formGroup]="form" class="mt-4">
+      <div class="mb-3">
+        <label for="username" class="form-label">Name</label>
+        <input
+          formControlName="username"
+          class="form-control"
+          id="username"
+          type="text"
+          placeholder="Username"
+          aria-label="Username"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          formControlName="password"
+          class="form-control"
+          id="password"
+          type="password"
+          placeholder="Password"
+          aria-label="Password"
+        />
+      </div>
+      <button (click)="createUser()" type="button" class="btn btn-primary">
+        Sign Up
+      </button>
+      <button
+        [routerLink]="['/login']"
+        type="button"
+        class="btn btn-danger ms-2"
+      >
+        Cancel
+      </button>
+    </form>
+  </div>
+</div>
+<
